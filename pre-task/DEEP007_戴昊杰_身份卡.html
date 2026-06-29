@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第三自习室 · DEEP007 · 戴昊杰</title>
+<style>
+  :root {
+    --bg: #000;
+    --peach: #f2a88c;
+    --peach-skin: #fbc4ab;
+    --peach-leaf: #7ca878;
+    --gold: #c9a36e;
+    --gold-light: #e0c78a;
+    --text: #f5f5f7;
+    --text2: #a1a1a6;
+    --text3: #6e6e73;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    min-height: 100vh; width: 520px;
+    display: flex; align-items: center; justify-content: center;
+    background: #000;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'PingFang SC', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── dramatic light sculpture ── */
+  .light-sculpture {
+    position: fixed; z-index: 0; pointer-events: none;
+  }
+  .beam-main {
+    width: 600px; height: 700px;
+    background: radial-gradient(ellipse at 50% 40%, rgba(242,168,140,0.06) 0%, transparent 65%);
+    top: 50%; left: 50%; transform: translate(-50%, -50%);
+  }
+  .beam-top {
+    width: 300px; height: 200px;
+    background: radial-gradient(ellipse at 50% 100%, rgba(242,168,140,0.08) 0%, transparent 70%);
+    top: 8%; left: 50%; transform: translateX(-50%);
+  }
+
+  /* ── card ── */
+  .card {
+    position: relative; z-index: 1;
+    width: 460px; height: 640px;
+    border-radius: 24px;
+    background: linear-gradient(180deg, rgba(20,20,24,0.82) 0%, rgba(10,10,14,0.94) 100%);
+    backdrop-filter: blur(80px) saturate(200%);
+    -webkit-backdrop-filter: blur(80px) saturate(200%);
+    border: 1px solid rgba(255,255,255,0.06);
+    box-shadow:
+      0 0 0 0.5px rgba(255,255,255,0.04) inset,
+      0 0 80px rgba(242,168,140,0.05),
+      0 4px 40px rgba(0,0,0,0.6);
+    padding: 44px 40px 36px;
+    display: flex; flex-direction: column;
+    align-items: center;
+  }
+
+  /* ── top line ── */
+  .top-line {
+    width: 32px; height: 3px;
+    border-radius: 2px;
+    background: var(--peach);
+    margin-bottom: 24px;
+    box-shadow: 0 0 12px rgba(242,168,140,0.5);
+  }
+
+  /* ── peach logo ── */
+  .peach-logo {
+    width: 84px; height: 94px;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  .peach-svg {
+    width: 100%; height: 100%;
+  }
+  /* breathing glow */
+  .peach-glow {
+    position: absolute;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(242,168,140,0.25) 0%, transparent 70%);
+    top: 10px; left: 2px;
+    animation: peach-breathe 3s ease-in-out infinite;
+  }
+  @keyframes peach-breathe {
+    0%, 100% { opacity: 0.4; transform: scale(1); }
+    50%      { opacity: 1; transform: scale(1.18); }
+  }
+
+  /* ── name ── */
+  .name-section {
+    text-align: center; margin-bottom: 4px;
+  }
+  .name-main {
+    font-size: 40px; font-weight: 700;
+    color: var(--text);
+    letter-spacing: 10px;
+    line-height: 1.2;
+  }
+  .name-sub {
+    font-size: 13px; font-weight: 400;
+    color: var(--text2);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+
+  /* ── divider ── */
+  .gold-divider {
+    width: 120px; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(242,168,140,0.5) 30%, rgba(242,168,140,0.5) 70%, transparent);
+    margin: 22px 0;
+  }
+
+  /* ── info rows ── */
+  .info-block {
+    width: 100%;
+    display: flex; flex-direction: column;
+    gap: 2px;
+    margin-bottom: 26px;
+  }
+  .info-row {
+    display: flex; align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.015);
+    transition: background 0.3s;
+  }
+  .info-row:hover {
+    background: rgba(255,255,255,0.04);
+  }
+  .info-key {
+    font-size: 12px; color: var(--text3);
+    font-weight: 500; letter-spacing: 1px;
+  }
+  .info-val {
+    font-size: 15px; font-weight: 600;
+    color: var(--text);
+    text-align: right;
+  }
+  .info-val.code {
+    font-family: 'SF Mono', 'Menlo', monospace;
+    font-size: 20px; font-weight: 700;
+    color: var(--peach);
+    letter-spacing: 3px;
+  }
+
+  /* ── bottom section ── */
+  .bottom-section {
+    width: 100%; margin-top: auto;
+    display: flex; align-items: flex-end;
+    justify-content: space-between;
+  }
+  .bottom-left {
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .bottom-label {
+    font-size: 9px; color: var(--text3);
+    letter-spacing: 2px; text-transform: uppercase;
+  }
+  .bottom-date {
+    font-size: 14px; color: var(--text2);
+    font-weight: 500;
+  }
+
+  /* ── strength bars ── */
+  .strength-mark {
+    display: flex; gap: 5px; align-items: flex-end;
+  }
+  .s-bar {
+    width: 3px; border-radius: 2px;
+    background: linear-gradient(to top, rgba(242,168,140,0.3), rgba(242,168,140,0.9));
+  }
+  .s-bar:nth-child(1) { height: 14px; }
+  .s-bar:nth-child(2) { height: 24px; }
+  .s-bar:nth-child(3) { height: 18px; }
+  .s-bar:nth-child(4) { height: 28px; }
+  .s-bar:nth-child(5) { height: 20px; }
+
+  /* ── rank badge ── */
+  .rank-badge {
+    position: absolute;
+    top: 18px; right: 22px;
+    font-family: 'SF Mono', 'Menlo', monospace;
+    font-size: 10px; font-weight: 700;
+    color: var(--peach);
+    letter-spacing: 2px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background: rgba(242,168,140,0.06);
+    border: 1px solid rgba(242,168,140,0.15);
+  }
+</style>
+</head>
+<body>
+
+<div class="light-sculpture beam-main"></div>
+<div class="light-sculpture beam-top"></div>
+
+<div class="card">
+
+  <div class="rank-badge">· 探索者 ·</div>
+
+  <div class="top-line"></div>
+
+  <!-- ── Peach Logo ── -->
+  <div class="peach-logo">
+    <div class="peach-glow"></div>
+    <svg class="peach-svg" viewBox="0 0 100 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="peachGrad" cx="40%" cy="35%">
+          <stop offset="0%" stop-color="#fbc4ab"/>
+          <stop offset="60%" stop-color="#f2a88c"/>
+          <stop offset="100%" stop-color="#e88978"/>
+        </radialGradient>
+        <radialGradient id="peachInner" cx="45%" cy="40%">
+          <stop offset="0%" stop-color="#fdd4c4"/>
+          <stop offset="50%" stop-color="#f5b8a0"/>
+          <stop offset="100%" stop-color="#e89578"/>
+        </radialGradient>
+        <linearGradient id="leafGrad" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#5a8a4a"/>
+          <stop offset="100%" stop-color="#7ca878"/>
+        </linearGradient>
+        <filter id="softShadow">
+          <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity="0.25"/>
+        </filter>
+      </defs>
+
+      <!-- Leaf left -->
+      <path d="M46 24 Q40 10 52 6 Q58 10 52 22 Z" fill="url(#leafGrad)" opacity="0.9"/>
+      <!-- Leaf right -->
+      <path d="M56 20 Q64 6 56 2 Q46 6 52 20 Z" fill="url(#leafGrad)" opacity="0.7"/>
+      <!-- Stem -->
+      <line x1="50" y1="22" x2="50" y2="30" stroke="#5a8a4a" stroke-width="1.5" stroke-linecap="round"/>
+
+      <!-- Main peach body - left lobe -->
+      <ellipse cx="42" cy="68" rx="36" ry="38" fill="url(#peachGrad)" filter="url(#softShadow)"/>
+      <!-- Main peach body - right lobe -->
+      <ellipse cx="62" cy="68" rx="36" ry="38" fill="url(#peachGrad)" filter="url(#softShadow)"/>
+
+      <!-- Center crease -->
+      <path d="M38 50 Q50 80 38 100" stroke="#d4856a" stroke-width="1" fill="none" opacity="0.5"/>
+      <path d="M64 50 Q52 80 64 100" stroke="#d4856a" stroke-width="1" fill="none" opacity="0.5"/>
+
+      <!-- Highlight -->
+      <ellipse cx="38" cy="58" rx="10" ry="12" fill="white" opacity="0.12"/>
+      <ellipse cx="34" cy="54" rx="5" ry="6" fill="white" opacity="0.08"/>
+    </svg>
+  </div>
+
+  <div class="name-section">
+    <div class="name-main">戴 昊 杰</div>
+    <div class="name-sub">Haojie Dai</div>
+  </div>
+
+  <div class="gold-divider"></div>
+
+  <div class="info-block">
+    <div class="info-row">
+      <span class="info-key">DEEP 编号</span>
+      <span class="info-val code">DEEP007</span>
+    </div>
+    <div class="info-row">
+      <span class="info-key">个人 ID</span>
+      <span class="info-val code">DEEP007</span>
+    </div>
+    <div class="info-row">
+      <span class="info-key">所属自习室</span>
+      <span class="info-val">第三自习室</span>
+    </div>
+    <div class="info-row">
+      <span class="info-key">入营日期</span>
+      <span class="info-val">2026.06.13</span>
+    </div>
+  </div>
+
+  <div class="bottom-section">
+    <div class="bottom-left">
+      <span class="bottom-label">第三自习室 · Digital Identity</span>
+      <span class="bottom-date">MMXXVI</span>
+    </div>
+    <div class="strength-mark">
+      <div class="s-bar"></div>
+      <div class="s-bar"></div>
+      <div class="s-bar"></div>
+      <div class="s-bar"></div>
+      <div class="s-bar"></div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
