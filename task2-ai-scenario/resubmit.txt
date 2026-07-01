@@ -1,0 +1,5 @@
+GitHub用户名：daihaojie02-ops
+
+GitHub仓库链接：https://github.com/daihaojie02-ops/deep-camp-phase1-ai-barrier/tree/main/task2-ai-scenario
+
+改了一下内容。上次被退回的原因是场景和Agent搭建有关联，这次把所有文件里提到Task3/Agent搭建的地方都去掉了。场景描述改成了纯信息检索——就是想知道2026上半年这几个Multi-Agent框架到底什么情况，不是为了给后面哪个任务做技术选型。报告的结论和数据都没变，只是动机和表述改了。文件都在task2-ai-scenario文件夹里，14项提交内容都在。
