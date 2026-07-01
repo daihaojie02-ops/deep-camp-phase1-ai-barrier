@@ -1,66 +1,82 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><style>
-body{font-family:Consolas,monospace;padding:30px;max-width:900px;margin:0 auto;white-space:pre-wrap;background:#fff;color:#222;line-height:1.6;font-size:14px;}
-h1{font-size:18px;border-bottom:2px solid #333;padding-bottom:8px;}
-h2{font-size:15px;margin-top:24px;color:#555;}
-table{border-collapse:collapse;width:100%;margin:12px 0;}
-td,th{border:1px solid #ccc;padding:6px 10px;text-align:left;font-size:13px;}
-th{background:#f5f5f5;}
-.highlight{background:#fffde7;padding:2px 6px;}
-</style></head><body>
-<h1>04-framework：西藏地理文化认知 — 5 节点关系框架图</h1>
-<h2>节点关系图</h2>
-<pre>
-                         ┌───────────────────────────┐
-                         │    节点 1：青藏高原         │
-                         │    地理与气候（基础）       │
-                         │  • 印度板块撞欧亚          │
-                         │  • 均海拔 4000-5000m       │
-                         │  • 亚洲水塔（5 大河）       │
-                         │  • 4000m 气候墙→西北干      │
-                         │    东南湿                  │
-                         └──────┬────────┬───────────┘
-                                │        │
-                    "塑造"      │        │      "决定"
-                                │        │
-              ┌─────────────────┘        └──────────────────┐
-              ▼                                              ▼
-   ┌──────────────────────┐                     ┌──────────────────────┐
-   │  节点 5：西藏历史概要  │                     │  节点 2：藏传佛教      │
-   │  （脉络）             │                     │  与文化体系（机制）    │
-   │  • 吐蕃→元→明→清     │                     │  • 四大教派           │
-   │    →现代 四阶段递进   │                     │  • 转山转经/六字真言   │
-   │  • 极端地理→统治成本  │                     │  • 信仰驱动 vs 现代旅游│
-   │    高→间接→直辖渐进  │                     └──────────┬───────────┘
-   └──────────┬───────────┘                                 │
-              │                                   "衍生"    │
-              ▼                                             ▼
-   ┌──────────────────────┐                     ┌──────────────────────┐
-   │  节点 4：藏族民俗      │                     │  节点 3：高原旅行      │
-   │  与日常禁忌（应用）    │◄────────────────────│  适应与路线（应用）    │
-   │  • 献哈达/酥油茶      │    "知情才能         │  • 高反机制（氧分压）   │
-   │  • 天葬禁拍禁看       │     不冒犯"         │  • 电梯 vs 爬楼梯     │
-   │  • 顺时针/忌摸头      │                     │  • 慢就是快           │
-   │  • 经幡/玛尼堆        │                     │  • 四条路线           │
-   └──────────────────────┘                     └──────────────────────┘
-           ↑                                            ↑
-           │                 "旅行者需要知道这两层"        │
-           └────────────────────────────────────────────┘
-</pre>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<style>
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #1a1a2e; color: #eee; padding: 40px; max-width: 900px; margin: 0 auto; }
+h1 { color: #e94560; text-align: center; margin-bottom: 10px; font-size: 24px; }
+.sub { text-align: center; color: #888; margin-bottom: 40px; font-size: 14px; }
+.diagram { display: flex; flex-direction: column; align-items: center; gap: 0; }
+.node { background: #16213e; border: 2px solid #0f3460; border-radius: 12px; padding: 20px 30px; width: 500px; text-align: center; }
+.node h2 { margin: 0 0 8px 0; font-size: 18px; }
+.node p { margin: 2px 0; font-size: 13px; color: #aab; }
+.n1 h2 { color: #4fc3f7; }
+.n1 { border-color: #4fc3f7; }
+.n2 h2 { color: #ffb74d; }
+.n2 { border-color: #ffb74d; }
+.n3 h2 { color: #81c784; }
+.n3 { border-color: #81c784; }
+.arrow-group { display: flex; gap: 120px; margin: 8px 0; }
+.arrow-col { display: flex; flex-direction: column; align-items: center; }
+.arrow-down { font-size: 28px; color: #e94560; }
+.arrow-label { font-size: 11px; color: #888; margin: 2px 0; text-align: center; max-width: 180px; }
+.bottom-row { display: flex; gap: 30px; margin-top: 8px; align-items: center; }
+.relation-col { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.relation-arrow { font-size: 24px; color: #ffb74d; }
+.bottom-label { font-size: 11px; color: #888; text-align: center; max-width: 80px; }
+.summary { margin-top: 40px; background: #16213e; border-radius: 12px; padding: 20px 30px; border-left: 4px solid #e94560; }
+.summary h3 { color: #e94560; margin-top: 0; }
+.summary p { font-size: 14px; line-height: 1.6; }
+.legend { margin-top: 20px; font-size: 12px; color: #555; text-align: center; }
+</style>
+</head>
+<body>
+<h1>西藏地理文化认知 · 3 节点关系框架</h1>
+<p class="sub">X1 AI 加速器 v2.0 · 2026.07.01</p>
 
-<h2>关系标注</h2>
-<table><tr><th>从 → 到</th><th>关系</th><th>含义</th></tr>
-<tr><td>节点1→节点2</td><td>塑造</td><td>极端高海拔环境催生了独特的信仰体系</td></tr>
-<tr><td>节点1→节点5</td><td>决定</td><td>高寒缺氧→统治成本高→间接到直辖渐进</td></tr>
-<tr><td>节点2→节点4</td><td>衍生</td><td>几乎所有民俗禁忌背后都是佛教逻辑</td></tr>
-<tr><td>节点2→节点3</td><td>制约</td><td>理解信仰才能理解"为什么旅行者应该慢下来"</td></tr>
-<tr><td>节点4→节点3</td><td>约束</td><td>旅行安全包括文化尊重（不拍天葬、不逆时针）</td></tr>
-<tr><td>节点1→节点3</td><td>根源</td><td>地理决定了低氧环境→一切旅行安全的基础</td></tr>
-</table>
+<div class="diagram">
+  <div class="node n1">
+    <h2>节点 1：青藏高原地理与气候（基础）</h2>
+    <p>印度板块撞欧亚 → 抬升 · 均海拔 4000-5000m · 亚洲水塔（5大河发源）</p>
+    <p>4000m 气候墙 → 西北干旱 / 东南湿润 · 低氧环境 = 高反根源</p>
+  </div>
 
-<h2>一句话总结（经 X1 后更新）</h2>
-<p><strong>西藏是一块被板块碰撞从海底抬到4000米高空的土地，这场地质事件塑造了地球上最独特的地理气候、最极端的信仰体系、最严密的民俗禁忌和最顽强的人类生存方式；进入它的唯一正确姿势不是"规划"，是"慢"——用身体适应它的高度，用理解接近它的人。</strong></p>
+  <div class="arrow-group">
+    <div class="arrow-col">
+      <div class="arrow-down">▼</div>
+      <div class="arrow-label">"塑造"<br>极端环境催生信仰体系</div>
+    </div>
+    <div class="arrow-col">
+      <div class="arrow-down">▼</div>
+      <div class="arrow-label">"根源"<br>低氧决定一切旅行风险</div>
+    </div>
+  </div>
 
-<h2>后续深入方向</h2>
-<p>1. 节点2补课（藏传佛教深挖） 2. 节点3实战化（具体路线规划） 3. 跨节点新问题（西藏当代发展）</p>
-</body></html>
+  <div class="bottom-row">
+    <div class="node n2">
+      <h2>节点 2：藏传佛教与文化体系（机制）</h2>
+      <p>苯教+佛教 300 年融合 · 四大教派（宁玛/萨迦/噶举/格鲁）</p>
+      <p>转山转经 · 六字真言=六度波罗蜜 · 禁忌背后的佛教逻辑</p>
+      <p>凉州会盟 1247 → 八思巴帝师制度</p>
+    </div>
+    <div class="relation-col">
+      <div class="relation-arrow">→</div>
+      <div class="bottom-label">"制约"<br>信仰规则决定行为边界</div>
+    </div>
+    <div class="node n3">
+      <h2>节点 3：高原旅行适应与路线（应用）</h2>
+      <p>高反机制（氧分压≠氧浓度）· 电梯 vs 爬楼梯</p>
+      <p>慢就是快 · 四条路线 + 八大误区</p>
+      <p>顺时针/天葬/摸头禁忌 · 洋葱穿衣法 · 温差→感冒→肺水肿链条</p>
+    </div>
+  </div>
+</div>
+
+<div class="summary">
+  <h3>一句话总结</h3>
+  <p>西藏是一块被板块碰撞从海底抬到 4000 米高空的土地——这场地质事件决定了一切：它催生了地球上唯一一个把"磕长头转山"当成日常修行的信仰体系，它要求每一个进入者必须用"慢"来换取安全。<strong>理解西藏的正确顺序是：先理解脚下的土地 → 再理解土地上的人 → 最后规划自己的路。</strong></p>
+</div>
+
+<div class="legend">X1 v2.0 · 3 节点关系框架 · 三条关系标注（塑造 / 根源 / 制约）· AI 原生学习三步闭环</div>
+</body>
+</html>
