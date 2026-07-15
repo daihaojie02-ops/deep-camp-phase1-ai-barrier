@@ -1,0 +1,190 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║     🧠 Personal Knowledge Management — DEMO                ║
+║     "你的第二个大脑" — 把学过的东西变成可搜索可关联的AI知识库 ║
+╚══════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📋 Step 1: Index — 扫描所有笔记，提取标签和元数据
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+============================================================
+  📚 Personal Knowledge Base Index
+  Generated: 2026-07-15T20:18:07
+  Total Notes: 9
+============================================================
+
+  📁 root/ (9 notes)
+    ├─ agent-reach
+    │  #agent, #api, #github +1 | 166 words | 2026-06-27
+    ├─ auth-to-aplusmax-strategy
+    │  #github | 121 words | 2026-07-05
+    ├─ context-compression-auto
+    │  #claude-code | 76 words | 2026-06-25
+    ├─ DEEP营考核平台
+    │  #deep-camp | 53 words | 2026-07-15
+    ├─ DEEP营任务提交 — 评审教训
+    │  #agent, #git, #github +1 | 346 words | 2026-07-01
+    ├─ github-gfw-clone-strategy
+    │  #api, #git, #github | 84 words | 2026-07-04
+    ├─ MEMORY
+    │  #agent, #workflow, #api +3 | 54 words | 2026-07-15
+    ├─ workflow-yaml-fix-pipeline
+    │  #agent, #workflow, #api +3 | 115 words | 2026-06-18
+    ├─ xfyun-agent-platform
+    │  #agent, #workflow, #api +3 | 176 words | 2026-06-18
+
+  ────────────────────────────────────────────────────────
+  🏷  Tag Cloud: #agent(5) #api(5) #github(5) #deep-camp(3) #workflow(3) #yaml(3) #python(2) #git(2) #prompt(2) #claude-code(1) 
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔍 Step 2: Search — 全文搜索 "Agent"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+============================================================
+  🔍 Search: "Agent"
+  Found in 5 notes
+============================================================
+
+  📄 agent-reach
+     agent-reach.md (5 matches)
+     L2: ---
+name: agent-reach
+description: Agent-Reach 安装和渠道状态——13 平台互联网接入层...
+     L3: name: agent-reach
+description: Agent-Reach 安装和渠道状态——13 平台互联网接入层
+metadata:...
+     L10: ## Agent-Reach — 互联网能力层...
+     ... and 2 more matches
+
+  📄 DEEP营任务提交 — 评审教训
+     deep-camp-submission-rules.md (3 matches)
+     L19: - **分数：** AI初审 96分 × 40% + Auth复审 0分 × 60% = 38.4 分 → 未达标
+- **Auth判词：** 三引擎（Gemini Pro + GPT-4o + Ge...
+     L25: 3. **提交前自查范围排除。** 不要假设"这个应该不算吧"，逐字对照排除清单
+- **修复：** 砍掉 8 个文件中所有"Task 3/Agent搭建/Agent雏形"字眼，场景重构为"纯信息...
+     L107: - **命名规则：** `DEEP007_戴昊杰_[内容].扩展名`
+- **目录结构：** `pre-task/` → `task1-ai-barrier/` → `task2-ai-scenari...
+
+  📄 MEMORY
+     MEMORY.md (2 matches)
+     L1: - [星辰Agent平台](xfyun-agent-platform.md) — API 端点、工作流结构、Bot 配置、常见操作
+- [工作流 YAML 修复管线](workflow-yaml-fi...
+     L3: - [工作流 YAML 修复管线](workflow-yaml-fix-pipeline.md) — export→PyYAML→import 模式和 UTF-8 编码陷阱
+- [Agent-Reac...
+
+  📄 workflow-yaml-fix-pipeline
+     workflow-yaml-fix-pipeline.md (3 matches)
+     L3: name: workflow-yaml-fix-pipeline
+description: 通过 YAML 导出→Python 修复→导入的方式修改星辰Agent工作流，避免 ReactFlow UI...
+     L12: 当需要批量修改星辰Agent平台的工作流（删除节点、清理引用、修改 Prompt）时，通过 API 操作比在 ReactFlow 画布上手操更可靠。...
+     L39: See: [[xfyun-agent-platform]]...
+
+  📄 xfyun-agent-platform
+     xfyun-agent-platform.md (3 matches)
+     L2: ---
+name: xfyun-agent-platform
+description: 星辰Agent平台 (agent.xfyun.cn) 的 API 端点、工作流结构和 Bot 配置知识...
+     L3: name: xfyun-agent-platform
+description: 星辰Agent平台 (agent.xfyun.cn) 的 API 端点、工作流结构和 Bot 配置知识
+metadata...
+     L10: ## 星辰Agent平台 (agent.xfyun.cn)...
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  🔍 Step 3: Search — 全文搜索 "API"
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+============================================================
+  🔍 Search: "API"
+  Found in 5 notes
+============================================================
+
+  📄 agent-reach
+     agent-reach.md (4 matches)
+     L21: - 全网语义搜索 (Exa via mcporter)、任意网页 (Jina Reader)
+- B站搜索 (curl API)...
+     L24: **⚠️ 需网络 (1个)：**
+- V2EX — API 连接超时，可能需要代理...
+     L44: **原因：** github.com 网页前端被 GFW 封锁，浏览器访问会超时。`gh` CLI 走 api.github.com，通常不被墙。...
+     ... and 1 more matches
+
+  📄 github-gfw-clone-strategy
+     github-gfw-clone-strategy.md (2 matches)
+     L16: 2. **Gitee 码云镜像** — 优先搜索 Gitee 上是否有同名仓库镜像（如 `gitee.com/lok666/get_jobs`），`git clone --depth 1` 秒下。
+3...
+     L21: **How to apply:** 下载 Release 文件优先用 `gh-proxy.com` 代理；Clone 整个仓库先搜 Gitee 镜像，没有则用 `gh api` 下载 tar.gz。...
+
+  📄 MEMORY
+     MEMORY.md (2 matches)
+     L1: - [星辰Agent平台](xfyun-agent-platform.md) — API 端点、工作流结构、Bot 配置、常见操作
+- [工作流 YAML 修复管线](workflow-yaml-fi...
+     L7: - [Auth A+max 证据链策略](auth-to-aplusmax-strategy.md) — GPT-4o 锚定机制、三层证据链（调研→验证→外部确认）、提交前 Checklist
+- [...
+
+  📄 workflow-yaml-fix-pipeline
+     workflow-yaml-fix-pipeline.md (4 matches)
+     L12: 当需要批量修改星辰Agent平台的工作流（删除节点、清理引用、修改 Prompt）时，通过 API 操作比在 ReactFlow 画布上手操更可靠。...
+     L16: 1. **导出**: `GET /xingchen-api/workflow/export/{id}` → 保存为 UTF-8 YAML 文件
+2. **Python 修复脚本**: 用 `PyYA...
+     L18: 2. **Python 修复脚本**: 用 `PyYAML` 解析、修改节点/边/引用、写回文件
+3. **导入**: `POST /xingchen-api/workflow/import` mul...
+     ... and 1 more matches
+
+  📄 xfyun-agent-platform
+     xfyun-agent-platform.md (5 matches)
+     L3: name: xfyun-agent-platform
+description: 星辰Agent平台 (agent.xfyun.cn) 的 API 端点、工作流结构和 Bot 配置知识
+metadata...
+     L12: ### 关键 API 端点
+- **工作流导出**: `GET /xingchen-api/workflow/export/{id}` → 返回 YAML...
+     L13: ### 关键 API 端点
+- **工作流导出**: `GET /xingchen-api/workflow/export/{id}` → 返回 YAML
+- **工作流导入**: `POST /xi...
+     ... and 2 more matches
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  📊 Step 4: Stats — 知识库统计面板
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+============================================================
+  📊 Knowledge Base Statistics
+============================================================
+  ├─ Total notes:    9
+  ├─ Total words:    1,328
+  ├─ Total size:     18.1 KB
+  ├─ Avg note size:  147 words
+  ├─ Unique tags:    11
+  └─ Old → New:      2026-06-18 → 2026-07-15
+
+  🏷  Top 10 Tags:
+     agent                █████ 5
+     github               █████ 5
+     api                  █████ 5
+     deep-camp            ███ 3
+     workflow             ███ 3
+     yaml                 ███ 3
+     python               ██ 2
+     git                  ██ 2
+     prompt               ██ 2
+     claude-code          █ 1
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  💾 Step 5: Backup — Git 自动备份检查
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+❌ Not a Git repository. Run 'git init' first.
+
+╔══════════════════════════════════════════════════════════════╗
+║  ✅ Demo Complete                                           ║
+║                                                            ║
+║  🎯 核心价值:                                                ║
+║  • 所有笔记结构化索引 → 搜3个关键词找到任何东西              ║
+║  • Git 版本控制 → 换电脑不丢，每次修改有记录                 ║
+║  • AI 可读 → Claude Code 可以直接分析你的知识库              ║
+║  • 零平台绑定 → Markdown + Git，永久可用                    ║
+║                                                            ║
+║  🔄 复利效应:                                                ║
+║  4年大学 × 职业生涯 = 数万条笔记                             ║
+║  期末复习 = 搜3个关键词                                      ║
+║  面试准备 = 看过自己所有的思考                               ║
+╚══════════════════════════════════════════════════════════════╝
+
