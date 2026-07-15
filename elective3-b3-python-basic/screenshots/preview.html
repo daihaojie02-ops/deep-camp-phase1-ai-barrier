@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8">
+<style>
+body { font-family: 'Consolas', 'Courier New', monospace; background: #1e1e1e; color: #d4d4d4; padding: 30px; max-width: 800px; margin: 0 auto; }
+h1 { color: #569cd6; }
+h2 { color: #ce9178; margin-top: 25px; }
+.code { background: #252526; border-left: 3px solid #569cd6; padding: 10px 15px; margin: 10px 0; white-space: pre; font-size: 13px; }
+.output { background: #0c0c0c; border-left: 3px solid #6a9955; padding: 10px 15px; margin: 5px 0 20px 0; white-space: pre; font-size: 13px; color: #6a9955; }
+.tag { color: #569cd6; font-size: 12px; }
+</style></head>
+<body>
+<h1>B3 Python 零基础入门 - 运行验证</h1>
+<p>Python 3.13.9 · Windows 11 · 戴昊杰 (DEEP007) · 2026.07.15</p>
+
+<h2>练习一：输出与变量</h2>
+<div class="code">name = "DEEP营"
+goal = "建立 AI 个性化壁垒"
+tool = "Python"
+print("我正在参加：", name)
+print("我的目标是：", goal)
+print("我开始学习：", tool)</div>
+<div class="output">我正在参加： DEEP营
+我的目标是： 建立 AI 个性化壁垒
+我开始学习： Python</div>
+
+<h2>练习二：列表与循环</h2>
+<div class="code">tools = ["ChatGPT", "Claude Code", "Codex", "Python", "GitHub"]
+for tool in tools:
+    print("-", tool)</div>
+<div class="output">我正在学习的工具：
+- ChatGPT
+- Claude Code
+- Codex
+- Python
+- GitHub</div>
+
+<h2>练习三：简单函数</h2>
+<div class="code">def make_task(task_name):
+    return "今天需要完成的任务是：" + task_name
+print(make_task("完成 DEEP 营 Python 零基础入门任务"))</div>
+<div class="output">今天需要完成的任务是：完成 DEEP 营 Python 零基础入门任务</div>
+
+<h2>DEEP 营任务清单生成器</h2>
+<div class="output">========================================
+DEEP 营今日任务清单
+========================================
+1. [ ] 完成 AI 壁垒方向卡
+2. [ ] 完成 AI 真实场景应用实验
+3. [ ] 完成 AI 工作流与 Agent 雏形任务
+4. [ ] 完成 Claude Code 真实问题解决选修
+5. [ ] 完成 Python 零基础入门选修
+6. [ ] 整理 GitHub 仓库
+7. [ ] 提交任务复盘
+
+今日进度： 3 / 7</div>
+
+<p style="margin-top:30px;color:#808080;">验证结论：4个Python文件全部成功运行 ✅</p>
+</body></html>
